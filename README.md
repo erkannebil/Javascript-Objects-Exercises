@@ -44,9 +44,3 @@ Bir terminal ekranında testleri çalıştırırken bir diğerinde ise debug yap
 ### Görev 3: Zorlayıcı görevler
 
 `index.js` dosyasında yer alan bonus görevleri yapabilirsiniz.
-
-
-## Faydalı Kaynaklar
-
-[What the Beep is `this` in JavaScript?](https://dev.to/brityhemming/what-the-beep-is-this-in-javascript-483o)
-
