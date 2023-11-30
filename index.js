@@ -2,9 +2,9 @@
 /*Bu görevleri yaparken çıktıların doğru çalıştığını kontrol etmeniz için console.log'u sıklıkla kullanmanızı tavsiye ederim.*/
 
 ///////////////Menu Elemanları ///////////////////
-const cay = {isim: "Çay", fiyat: 4, kategori: "İçecekler"};
-const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı"};
- 
+const cay = { isim: "Çay", fiyat: 4, kategori: "İçecekler" };
+const serpmeKahvalti = { isim: "Serpme Kahvaltı", fiyat: 16, kategori: "Kahvaltı" };
+
 /* Görev 1a: Nesneler döndüren bir fonksiyon yazın
 	Aşağıdaki MenuElemaniOlustur fonksiyonunu, yukarıda gördüğünüz cay ve serpmeKahvalti (isim, fiyat, kategori) nesnelerini oluşturacak şekilde yazın. 
 	Fonksiyonun özellikleri:
@@ -16,15 +16,15 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 
 
 function MenuElemaniOlustur(isim, fiyat, kategori) {
-    const newMenuElemani = {
-        isim: isim,
-        fiyat: fiyat,
-        kategori: kategori,
-    };
-    return newMenuElemani;
+	const newMenuElemani = {
+		isim: isim,
+		fiyat: fiyat,
+		kategori: kategori,
+	};
+	return newMenuElemani;
 }
 
-function indirim (MusteriTipi){
+function indirim(MusteriTipi) {
 
 };
 
@@ -68,30 +68,30 @@ console.log(menuEleman4);
 
 
 const burger = {
-    isim: "Burger",
-    fiyat: 18,
-    kategori: "Öğle Yemeği",
-    indirim: function (indirimTuru) {
-        let indirimOrani = 0;
+	isim: "Burger",
+	fiyat: 18,
+	kategori: "Öğle Yemeği",
+	indirim: function (indirimTuru) {
+		let indirimOrani = 0;
 
-        // İndirim türüne göre indirim oranını belirle
-        switch (indirimTuru) {
-            case "öğretmen":
-            case "öğrenci":
-                indirimOrani = 0.25; // %25 indirim
-                break;
-            case "diğer":
-                indirimOrani = 0.10; // %10 indirim
-                break;
-            default:
-                console.log("Geçersiz indirim türü");
-                return this.fiyat; // Geçersiz türse fiyatı değiştirmeme gerek yok
-        }
+		// İndirim türüne göre indirim oranını belirle
+		switch (indirimTuru) {
+			case "öğretmen":
+			case "öğrenci":
+				indirimOrani = 0.25; // %25 indirim
+				break;
+			case "diğer":
+				indirimOrani = 0.10; // %10 indirim
+				break;
+			default:
+				console.log("Geçersiz indirim türü");
+				return this.fiyat; // Geçersiz türse fiyatı değiştirmeme gerek yok
+		}
 
-        // İndirimli fiyatı hesapla
-        const indirimliFiyat = this.fiyat - this.fiyat * indirimOrani;
-        return indirimliFiyat;
-    },
+		// İndirimli fiyatı hesapla
+		const indirimliFiyat = this.fiyat - this.fiyat * indirimOrani;
+		return indirimliFiyat;
+	},
 };
 
 
@@ -99,14 +99,14 @@ const burger = {
 
 ///////////////Değerlendirmeler (MVP)///////////////////
 const degerlendirmeler = [
-    {isim: "Nalan", puan: 5, geribildirim:"Mükemmel atmosfer ve mükemmel vegan seçenekleri!"},
-    {isim: "Kuddusi", puan: 3, geribildirim:"Benim zevkime göre biraz fazla yenilikçi, burger iyi ama fiyatı yüksek"},
-    {isim: "Kamuran", puan: 4, geribildirim:"eğlenceli bilgiler ve havalı hisler"},
-    {isim: "Elif", puan: 4.5, geribildirim:"Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim."},
-    {isim: "Pınar", puan: 3, geribildirim: "atıştırmalıklar harika ve gün içinde çalışmak için güzel bir cafe alanı."},
-    {isim: "Ahmet", puan: 2, geribildirim: "Bu mekan beni fazla etkilemedi. Menüde özel bir şey yok ve çok pahalı. Atmosferi de ben beğenmedim ama başkaları beğenebilir." },
-    {isim: "Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."},
-    {isim: "Reyna", puan: 3.5, geribildirim: ""},
+	{ isim: "Nalan", puan: 5, geribildirim: "Mükemmel atmosfer ve mükemmel vegan seçenekleri!" },
+	{ isim: "Kuddusi", puan: 3, geribildirim: "Benim zevkime göre biraz fazla yenilikçi, burger iyi ama fiyatı yüksek" },
+	{ isim: "Kamuran", puan: 4, geribildirim: "eğlenceli bilgiler ve havalı hisler" },
+	{ isim: "Elif", puan: 4.5, geribildirim: "Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim." },
+	{ isim: "Pınar", puan: 3, geribildirim: "atıştırmalıklar harika ve gün içinde çalışmak için güzel bir cafe alanı." },
+	{ isim: "Ahmet", puan: 2, geribildirim: "Bu mekan beni fazla etkilemedi. Menüde özel bir şey yok ve çok pahalı. Atmosferi de ben beğenmedim ama başkaları beğenebilir." },
+	{ isim: "Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi." },
+	{ isim: "Reyna", puan: 3.5, geribildirim: "" },
 ]
 
 /*  Görev 3 (ototest yok):  
@@ -114,18 +114,26 @@ const degerlendirmeler = [
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
 
-for(let i=0;i<degerlendirmeler.length;i++){
-     if(degerlendirmeler[i].isim) === "Ahmet"){
-        console.log(degerlendirmeler[i].geribildirim)
-	 };
-};
+for (let i = 0; i < degerlendirmeler.length; i++) {
+	if ((degerlendirmeler[i].isim) === "Ahmet") {
+		console.log(degerlendirmeler[i].geribildirim)
+	}
 
+};
 
 /*  Görev 4 (ototest yok):  
 	Reyna'nın geribildirimi girilmemiş! Aşağıdakileri uygulayın: (fonksiyona gerek yok) 
 	1. Bu geribildirimi Reyna'nın değerlendirmesine ekleyin - "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
+
+for (let i = 0; i < degerlendirmeler.length; i++) {
+	if (degerlendirmeler[i].isim === "Reyna") {
+		degerlendirmeler[i].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım";
+	}
+}
+console.log(degerlendirmeler);
+
 
 
 
@@ -141,10 +149,12 @@ for(let i=0;i<degerlendirmeler.length;i++){
 */
 
 
-function DegerlendirmeEkle(/*Kodlar buraya */){
-	/*Kodlar buraya */
-	
-}
+function DegerlendirmeEkle(degerlendirmeler, isim, puan, geribildirim) {
+	const yeniDegerlendirme = { isim, puan, geribildirim };
+	degerlendirmeler.push(yeniDegerlendirme);
+	return degerlendirmeler;
+  }
+  
 
 
 
@@ -159,10 +169,10 @@ function DegerlendirmeEkle(/*Kodlar buraya */){
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
-
-}
+function AnahtardanDegerlendirmeAl(dizi, index) {
+	const degerlendirme = dizi[index];
+	return `${degerlendirme.isim} isimli kişi ${degerlendirme.puan} puan verdi ve şunları yazdı: ${degerlendirme.geribildirim}`;
+  }
 
 
 
@@ -179,10 +189,14 @@ function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
 */
 
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
-} 
-
+function SonDegerlendirmeyiAl(degerlendirmeler) {
+	if (degerlendirmeler.length === 0) {
+	  return "Degerlendirme bulunamadı.";
+	}
+  
+	const sonDegerlendirme = degerlendirmeler[degerlendirmeler.length - 1];
+	return `${sonDegerlendirme.isim} isimli kişi ${sonDegerlendirme.puan} puan verdi ve şunları yazdı: ${sonDegerlendirme.geribildirim}`;
+  }
 
 
 /////////////// BONUS  GÖRVLER////////////////////
@@ -195,14 +209,14 @@ function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
 	
 	Örnek: PuanaGoreDegerlendirmeAl(degerlendirmeler, 4) 4 ile 4.9 puan aralığındaki tüm değerlendirmeleri döndürecek :
 	[
-    {isim: "Kamuran", puan: 4, geribildirim:"eğlenceli bilgiler ve havalı hisler},
-    {isim: "Elif", puan: 4.5, geribildirim:"Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim."},
-    {isim:"Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."}
+	{isim: "Kamuran", puan: 4, geribildirim:"eğlenceli bilgiler ve havalı hisler},
+	{isim: "Elif", puan: 4.5, geribildirim:"Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim."},
+	{isim:"Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."}
 	]
 */
 
 function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+	/* Kodlar buraya */
 }
 
 
@@ -214,7 +228,7 @@ function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
 */
 
 function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+	/* Kodlar buraya */
 }
 
 
@@ -237,13 +251,13 @@ function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
 
 
 function arabaYapici(/* Kodlar buraya */) {
-    /* Kodlar buraya */
-    
+	/* Kodlar buraya */
+
 }
 
 
 /*  Buradan aşağıdaki kodları değiştirmeyin lütfen */
-function sa(){
+function sa() {
 	console.log('Kodlar çalışıyor');
 	return 'as';
 }
