@@ -15,11 +15,18 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 */
 
 
-function MenuElemaniOlustur(/*Kodlar buraya*/){
-	/*Kodlar buraya*/
+function MenuElemaniOlustur(isim, fiyat, kategori) {
+    const newMenuElemani = {
+        isim: isim,
+        fiyat: fiyat,
+        kategori: kategori,
+    };
+    return newMenuElemani;
 }
 
+function indirim (MusteriTipi){
 
+};
 
 /*  Görev 1b (otomatik test yok): 
 	Fonksiyonu çağırın!
@@ -30,6 +37,20 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 	
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
+// Step 1: Call the function with specific parameters
+const menuEleman1 = MenuElemaniOlustur("Karışık Pizza", 5, "Pizzalar");
+console.log(menuEleman1);
+
+// Step 2: Create at least 3 menu items with your chosen name, price, and category
+const menuEleman2 = MenuElemaniOlustur("Margarita Pizza", 7, "Pizzalar");
+const menuEleman3 = MenuElemaniOlustur("Izgara Tavuk", 10, "Izgaralar");
+const menuEleman4 = MenuElemaniOlustur("Mevsim Salata", 8, "Salatalar");
+
+// Step 3: Display the results in the console
+console.log(menuEleman2);
+console.log(menuEleman3);
+console.log(menuEleman4);
+
 
 
 
@@ -47,11 +68,32 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 
 
 const burger = {
-	isim: "Burger", 
-	fiyat: 18, 
-	kategori: "Öğle Yemeği", 
+    isim: "Burger",
+    fiyat: 18,
+    kategori: "Öğle Yemeği",
+    indirim: function (indirimTuru) {
+        let indirimOrani = 0;
 
-}
+        // İndirim türüne göre indirim oranını belirle
+        switch (indirimTuru) {
+            case "öğretmen":
+            case "öğrenci":
+                indirimOrani = 0.25; // %25 indirim
+                break;
+            case "diğer":
+                indirimOrani = 0.10; // %10 indirim
+                break;
+            default:
+                console.log("Geçersiz indirim türü");
+                return this.fiyat; // Geçersiz türse fiyatı değiştirmeme gerek yok
+        }
+
+        // İndirimli fiyatı hesapla
+        const indirimliFiyat = this.fiyat - this.fiyat * indirimOrani;
+        return indirimliFiyat;
+    },
+};
+
 
 
 
@@ -72,6 +114,11 @@ const degerlendirmeler = [
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
 
+for(let i=0;i<degerlendirmeler.length;i++){
+     if(degerlendirmeler[i].isim) === "Ahmet"){
+        console.log(degerlendirmeler[i].geribildirim)
+	 };
+};
 
 
 /*  Görev 4 (ototest yok):  
